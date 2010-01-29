@@ -6,10 +6,6 @@ ActionController::Routing::Routes.draw do |map|
   map.create_user_session '/signin', :controller => 'user_sessions', :action => 'create', :conditions => {:method => :post}
   map.signout '/signout', :controller => 'user_sessions', :action => 'destroy' 
 
-  # routes for sign up
-  map.signup '/signup', :controller => 'users', :action => 'new', :conditions => {:method => :get}
-  map.create_user '/signup', :controller => 'users', :action => 'create', :conditions => {:method => :post}
-
   # routes for editing your own account
   map.account '/account', :controller => 'users', :action => 'edit', :conditions => {:method => :get}
   map.update_user '/account', :controller => 'users', :action => 'update', :conditions => {:method => :post}
