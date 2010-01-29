@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   
   config.gem 'authlogic'
-  config.gem 'authlogic-oid', :lib => 'authlogic_openid'
+  config.gem 'heyzap-authlogic-oid', :lib => 'authlogic_openid'
   config.gem 'haml'
   config.gem 'formtastic'
 
