@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
     c.openid_optional_fields = [:email] #TODO more fields from http://openid.net/specs/openid-simple-registration-extension-1_0.html
   end
 
+  def find_by_openid_identifier(openid_identifier)
+    find(:first, :conditions => ['openid_identifier=? OR backup_openid_identifier=?',openid_identifier])
+  end
+
 private
   def map_openid_registration(registration)
     self.email = registration["email"]

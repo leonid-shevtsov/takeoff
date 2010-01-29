@@ -31,5 +31,8 @@ Takeoff is my personal take on a Rails barebone application. I'm using it myself
 
 ## TODO
 
+* use backup openid somewhere
+* prevent registration if backup openid is taken
+* need to confirm backup openid, too
 * trim down tests
-* use http://github.com/toretore/javascript_routes/tree/master to get routes in javascript
+* use http://github.com/toretore/javascript_routes to get routes in javascript
